@@ -1,100 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Combined Example</title>
-    <link href="fontawesome-free-6.6.0-web/css/fontawesome.css" rel="stylesheet" />
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Form Example</title>  
+    <style>  
+          
+        .form-container {  
+            background-color: #ffffff;  
+            padding: 20px;  
+            border-radius: 5px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+            max-width: 400px;  
+            margin: 50px auto;  
+        }  
+        input[type="text"], select {  
+            width: 100%;  
+            padding: 10px;  
+            margin: 10px 0;  
+            border: 1px solid #ccc;  
+            border-radius: 4px;  
+        }  
+        button {  
+            background-color: #4CAF50;  
+            color: white;  
+            padding: 10px;  
+            border: none;  
+            border-radius: 4px;  
+            cursor: pointer;  
+            width: 100%;  
+        }  
+        button:hover {  
+            background-color: #165c1a;  
+        } 
+        .form-container{
+            background-color: rgb(212, 221, 220);
+        } 
+        .dropdown {  
+            position: relative;  
+            display: inline-block;  
+        }  
+        .dropdown-content {  
+            display: none;  
+            position: absolute;  
+            background-color: #ffffff;  
+            min-width: 160px;  
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+            z-index: 1;  
+        }  
+        .dropdown-content a {  
+            color: black;  
+            padding: 12px 16px;  
+            text-decoration: none;  
+            display: block;  
+        }  
+        .dropdown-content a:hover {  
+            background-color: #f1f1f1;  
+        }  
+        .dropdown:hover .dropdown-content {  
+            display: block;  
+        }  
+        .dropdown-toggle {  
+          
+           
+            background-color: #4CAF50;  
+            color: white;  
+            
+        }  
+        .dropdown-toggle:hover {  
+            background-color: #45a049;  
+        }  
+    </style>  
+</head>  
+<body>  
 
-    <style>
-        /* Hover effect example */
-        .link {
-            display: inline-block;
-            padding: 10px;
-            color: white;
-            background-color: green;
-            text-decoration: none;
-        }
-        .link:hover {
-            color: green;
-            background-color: white;
-            border: 2px solid green;
-        }
+<div class="form-container">  
+    <form>  
+        <label for="first-name">First Name</label>  
+        <input type="text" id="first-name" name="first-name" placeholder="Your name..">  
 
-        .highlighted-list {
-            background-color: yellow;
-        }
+        <label for="last-name">Last Name</label>  
+        <input type="text" id="last-name" name="last-name" placeholder="Your last name..">  
 
-        /* Z-index example */
-        .background-image {
-            position: absolute;
-            z-index: -1;
-            width: 100px;
-            height: 100px;
-        }
-        .heading {
-            position: relative;
-            z-index: 1;
-        }
+        <label for="country">Country</label>  
+        <select id="country" name="country">  
+            <option value="australia">Australia</option>  
+            <option value="usa">USA</option>  
+            <option value="canada">Canada</option>  
+            <option value="uk">United Kingdom</option>  
+            <!-- Add more countries as needed -->  
+        </select>  
 
-        /* Display property example */
-        .inline-box {
-            display: inline;
-            background-color: yellow;
-            padding: 5px;
-            border: 1px solid blue;
-        }
-        .inline-block-box {
-            display: inline-block;
-            background-color: yellow;
-            padding: 20px;
-            border: 1px solid blue;
-            margin: 5px;
-        }
-        .block-box {
-            display: block;
-            background-color: yellow;
-            padding: 20px;
-            border: 1px solid blue;
-            margin: 5px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Hover effect example -->
-    <h2>Before hover</h2>
-    <a href="#" class="link">This is a link</a>
-    <br><br>
+        <button type="submit">Submit</button>  
+    </form>  
+</div>  
 
-    <!-- List styling example -->
-    <ul class="highlighted-list">
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Coca Cola</li>
-    </ul>
-    <br>
-    <br>
-    
-    <!-- Image behind heading using z-index -->
-    <img src="screen.png" alt="Background Image" class="background-image" >
-    <h1 class="heading">This is a heading</h1>
-    <p class="heading">Because the image has a z-index of -1, it will be placed behind the text.</p>
+<div class="dropdown">  
+    <button class="dropdown-toggle">Dropdown</button>  
+    <div class="dropdown-content">  
+        <a href="#">Link 1</a>  
+        <a href="#">Link 2</a>  
+        <a href="#">Link 3</a>  
+    </div>  
+</div>  
 
-    <!-- Display property example -->
-    <h2>The display Property</h2>
-    <h3>display: inline</h3>
-    <span class="inline-box">hello</span>
-    <span class="inline-box">there</span>
-    <p>this is text this is text this is text this is text this is text</p>
-
-    <h3>display: inline-block</h3>
-    <div class="inline-block-box">hello</div>
-    <div class="inline-block-box">there</div>
-    <p>this is text this is text this is text this is text this is text</p>
-
-    <h3>display: block</h3>
-    <div class="block-box">hello</div>
-    <div class="block-box">there</div>
-    <p>this is text this is text this is text this is text this is text</p>
-</body>
+</body>  
 </html>
